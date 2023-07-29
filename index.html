@@ -3,73 +3,22 @@
 <head>
     <title>NovaLingua</title>
     <style>
-        body {
-            background-color: rgb(196,30,58);
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+        .page {
+            display: none;
         }
-
-        .text {
-            position: absolute;
-            color: white;
-            text-align: center;
-            width: 100%;
-            opacity: 0;
-        }
-
-        .big {
-            font-size: 4em;
-            font-weight: 600;
-            animation: bigTextMoving 5s 0s forwards;
-            height: 3.5em;
-        }
-
-        .small {
-            font-size: 1.5em;
-            font-weight: 400;
-            animation: smallTextMoving 5s 2s forwards;
-        }
-
-        @keyframes bigTextMoving {
-            0% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-            50% {
-                transform: translateY(-0%);
-                opacity: 0.9;
-            }
-            100% {
-                transform: translateY(-0%);
-                opacity: 1;
-            }
-        }
-
-        @keyframes smallTextMoving {
-            0% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-            50% {
-                transform: translateY(0%);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(0%);
-                opacity: 1;
-            }
-        }
+        /* ... additional styles ... */
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="text big" id="bigText">NovaLingua</div>
-    <div class="text small" id="smallText">Coming soon...</div>
+    <div id="home" class="page">
+        <h1>NovaLingua</h1>
+        <h2>Coming soon...</h2>
+    </div>
+    <div id="support" class="page">
+        <h1>Support</h1>
+        <p>+994 51 404 44 04</p>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
