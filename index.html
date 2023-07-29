@@ -73,21 +73,24 @@
     <div class="text small" id="smallText">Coming soon...</div>
 
     <script>
-        function hashChange() {
-            let bigTextElement = document.getElementById('bigText');
-            let smallTextElement = document.getElementById('smallText');
+        function updateContent() {
+            const bigText = document.getElementById('bigText');
+            const smallText = document.getElementById('smallText');
 
-            if (location.hash === '#/support') {
-                bigTextElement.textContent = 'Support';
-                smallTextElement.textContent = '+994 51 404 44 04';
-            } else {
-                bigTextElement.textContent = 'NovaLingua';
-                smallTextElement.textContent = 'Coming soon...';
+            switch (window.location.hash) {
+                case '#/support':
+                    bigText.innerHTML = 'Support';
+                    smallText.innerHTML = '+994 51 404 44 04';
+                    break;
+                default:
+                    bigText.innerHTML = 'NovaLingua';
+                    smallText.innerHTML = 'Coming soon...';
+                    break;
             }
         }
 
-        window.addEventListener('hashchange', hashChange);
-        window.addEventListener('DOMContentLoaded', hashChange);
+        window.addEventListener('hashchange', updateContent, false);
+        window.addEventListener('DOMContentLoaded', updateContent, false);
     </script>
 </body>
 </html>
